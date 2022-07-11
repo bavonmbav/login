@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="358.0" prefWidth="372.0" stylesheets="@styl.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.HomepageController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="358.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="74.0" prefWidth="200.0" style="-fx-background-color: #80b2b1; -fx-background-radius: 50;">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <Pane layoutX="13.0" layoutY="14.0" prefHeight="33.0" prefWidth="174.0" style="-fx-background-color: #f8f5f5; -fx-background-radius: 200;">
+                                 <children>
+                                    <SVGPath content="M40,60 C42,48 44,30 25,32" layoutX="118.0" layoutY="-27.0" />
+                                    <Label layoutX="32.0" layoutY="8.0" text="Login " textFill="#867465">
+                                       <font>
+                                          <Font name="Bauhaus 93" size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="284.0" prefWidth="195.0" style="-fx-background-color: #FFFF;">
+                           <children>
+                              <ProgressIndicator fx:id="compte" layoutX="14.0" layoutY="234.0" progress="0.0" />
+                              <Button layoutX="125.0" layoutY="242.0" mnemonicParsing="false" onAction="#close" style="-fx-background-color: #262c12;" text="Close" textFill="WHITE" />
+                              <ImageView fitHeight="181.0" fitWidth="171.0" layoutX="19.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icone-assasin-s-creed-origins-logo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane onMouseClicked="#connexionne" prefHeight="358.0" prefWidth="171.0" style="-fx-background-color: #e47927;">
+               <children>
+                  <TextField fx:id="user" layoutX="11.0" layoutY="160.0" style="-fx-background-radius: 50;" />
+                  <TextField fx:id="passe" layoutX="11.0" layoutY="229.0" style="-fx-background-radius: 50;" />
+                  <Text layoutX="14.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="click sur " wrappingWidth="66.13671875">
+                     <font>
+                        <Font name="Bodoni MT Black" size="13.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="118.0" fitWidth="153.0" layoutX="41.0" pickOnBounds="true" preserveRatio="true" styleClass="mainFxmlClass">
+                     <image>
+                        <Image url="@IMG_0664.JPG" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="61.0" layoutY="131.0" text="User Name" textFill="#4d4d4d">
+                     <font>
+                        <Font name="Bauhaus 93" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="56.0" layoutY="206.0" text="Password" textFill="#4d4d4d">
+                     <font>
+                        <Font name="Bauhaus 93" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="81.0" layoutY="280.0" onMouseClicked="#connexion" text="Connexion" textFill="#338eb9">
+                     <font>
+                        <Font name="Bauhaus 93" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
